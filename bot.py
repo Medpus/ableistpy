@@ -20,13 +20,6 @@ async def on_ready():
     print(
         f'{client.user} is connected to the following guild:\n'
         f'{guild.name}(id: {guild.id})')
-        
-#welcome
-@client.event
-async def on_member_join(member):
-    channel = client.get_channel(712727428791009302)
-    embed = discord.Embed(title="Welcome!", description=f"{member.mention} just joined.")
-    await channel.send(embed = embed)
 
 #message
 @client.event
