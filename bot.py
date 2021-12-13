@@ -6,8 +6,7 @@ import discord
 with open('config.json') as f:
     data = json.load(f)
     TOKEN = data["TOKEN"]
-    
-GUILD = 'GODS RELENTLESS ARMY'
+    GUILD = data["GUILD"]
 
 client = discord.Client()
 
