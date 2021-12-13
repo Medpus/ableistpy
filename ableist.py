@@ -1,9 +1,12 @@
 import os
 import random
-
+import json
 import discord
 
-TOKEN = 'OTE4OTg5OTYyNTgwNDYzNjI2.YbPSGQ.0BefyQCWijJpVfUHpATC0ycVfNk'
+with open('config.json') as f:
+    data = json.load(f)
+    TOKEN = data["TOKEN"]
+    
 GUILD = 'GODS RELENTLESS ARMY'
 
 client = discord.Client()
