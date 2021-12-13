@@ -3,7 +3,7 @@ import random
 
 import discord
 
-TOKEN = 'OTE4OTg5OTYyNTgwNDYzNjI2.YbPSGQ.BNo1JI-7NUmEHNezpBR5V9naXBw'
+TOKEN = 'OTE4OTg5OTYyNTgwNDYzNjI2.YbPSGQ.oxczWIP8qf3_mQjvQ4MbWyKQRQg'
 GUILD = 'GODS RELENTLESS ARMY'
 
 client = discord.Client()
