@@ -26,25 +26,25 @@ async def on_message(message):
         return
     
     martin_quotes = [
-        'det der er faktisk ikke lov å si.',
-        'skjerp deg, ingen ableisme på serveren.',
+        'Det der er faktisk ikke lov å si.',
+        'Skjerp deg, ingen ableisme på serveren.',
         'INGEN ABLEISME PÅ SERVEREN!',
-        'advarsel, ingen ableisme.',
-        'det ordet er ikke lov, bruk noe annet.',
-        'ikke lov, bruk et annet ord.',
-        'vennligst ikke bruk slike ord.',
-        'har du tenkt på undertrykkelsen det ordet medfører?',
-        'det er en null-toleranse for hatprat på denne serveren.',
-        'du klarer bedre.',
-        'seriøst? Bruk ord som ikke er undertrykkende for minoriteter i samfunnet.',
-        'det finnes ingen unnskyldning for ordet du nettopp brukte',
-        'du trenger terapi, det der blir for dumt.',
-        'skjerp deg! Til og med Vemund ville ikke brukt det ordet.',
-        'hvis du ikke bruker andre ord enn det fremover, kommer Ole til å banke deg opp.',
-        'ikke vær helt Marcus, vær bedre.',
+        'Advarsel, ingen ableisme.',
+        'Det ordet er ikke lov, bruk noe annet.',
+        'Ikke lov, bruk et annet ord.',
+        'Vennligst ikke bruk slike ord.',
+        'Har du tenkt på undertrykkelsen det ordet medfører?',
+        'Det er en null-toleranse for hatprat på denne serveren.',
+        'Du klarer bedre.',
+        'Seriøst? Bruk ord som ikke er undertrykkende for minoriteter i samfunnet.',
+        'Det finnes ingen unnskyldning for ordet du nettopp brukte',
+        'Du trenger terapi, det der blir for dumt.',
+        'Skjerp deg! Til og med Vemund ville ikke brukt det ordet.',
+        'Hvis du ikke bruker andre ord enn det fremover, kommer Ole til å banke deg opp.',
+        'Ikke vær helt Marcus, vær bedre.',
         'Martin kommer til å eksplodere, vennligst bruk et annet ord.',
         'Håkon godkjenner, men det gjør ikke jeg. Finn på noe annet.',
-        'neste gang du bruker slike ord kommer du til å føle på William sin vrede.',
+        'Neste gang du bruker slike ord kommer du til å føle på William sin vrede.',
     ]
 
     keywords = [
@@ -55,10 +55,11 @@ async def on_message(message):
         'handicap',
         'handikap',
         'downs',
+        'aids',
     ]
 
     if any(keyword in message.content.lower() for keyword in keywords):
-        response = (message.author.mention + ', ' + random.choice(martin_quotes))
+        response = (message.author.mention + ' ' + random.choice(martin_quotes))
         await message.channel.send(response)
 
 client.run(TOKEN)
