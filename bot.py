@@ -1,6 +1,7 @@
 import os
 import random
 import json
+from socket import timeout
 import discord
 
 TOKEN = os.getenv("DISCORD_TOKEN")
@@ -24,6 +25,7 @@ async def on_ready():
 async def on_message(message):
     if message.author == client.user:
         return
+        
     
     martin_quotes = [
         'Det der er faktisk ikke lov å si.',
